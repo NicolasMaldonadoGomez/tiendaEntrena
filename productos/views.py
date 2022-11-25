@@ -5,4 +5,7 @@ from django.http import HttpResponse
 def index(request):
     return HttpResponse("Hola, Django")
 
-# Create your views here.
+
+def nuevo(request):
+    return HttpResponse("¿Cual es tu nuevo producto?")
+    
