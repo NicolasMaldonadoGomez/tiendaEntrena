@@ -1,7 +1,11 @@
 from django.contrib import admin
-from .models import Producto
+from .models import Producto, Oferta
 
-class AdministracionProducto(admin.ModelAdmin):
+class AdministracionProductos(admin.ModelAdmin):
     list_display = ("nombre", "precio","stock")
 
-admin.site.register(Producto,AdministracionProducto)
+class AdministracionOfertas(admin.ModelAdmin):
+    list_display= ("codigo", "descripcion", "descuento")
+
+admin.site.register(Producto,AdministracionProductos)
+admin.site.register(Oferta,AdministracionOfertas)

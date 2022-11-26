@@ -9,6 +9,5 @@ class Producto (models.Model):
 
 class Oferta (models.Model):
     codigo = models.CharField(max_length=12)
-    description = models.CharField(max_length=255)
+    descripcion = models.CharField(max_length=255)
     descuento  = models.FloatField()
-    
